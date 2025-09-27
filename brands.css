@@ -1,0 +1,216 @@
+/* =======================
+   BRANDS PAGE STYLES
+   ======================= */
+
+/* Page Layout */
+.brands-page {
+  background: #fdfcfb url("background.jpg") center/cover no-repeat fixed;
+  min-height: 100vh;
+  padding: 40px 20px;
+  font-family: "Lato", sans-serif;
+  color: #f5f5f5;
+}
+
+.brands-page h1 {
+  text-align: center;
+  font-family: "Roboto Slab", serif;
+  font-size: 2.5rem;
+  color: #39ff14; /* neon green */
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.brands-page h1::after {
+  content: "";
+  display: block;
+  width: 120px;
+  height: 3px;
+  background: #39ff14;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+/* Grid Layout for Cards */
+.brands-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Brand Card */
+.brand-card {
+  background: rgba(20, 20, 20, 0.95);
+  border: 1px solid rgba(57, 255, 20, 0.3);
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.brand-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 24px rgba(57, 255, 20, 0.4);
+}
+
+/* Media Wrapper: Image → Video Hover */
+.media-wrapper {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.media-wrapper img,
+.media-wrapper video {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.4s ease-in-out;
+}
+
+.media-wrapper video {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.brand-card:hover .media-wrapper video {
+  opacity: 1;
+}
+
+.brand-card:hover .media-wrapper img {
+  opacity: 0;
+}
+
+/* Brand Content */
+.brand-content {
+  padding: 20px;
+}
+
+.brand-content h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #39ff14;
+  font-family: "Roboto Slab", serif;
+}
+
+.brand-content p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #ddd;
+}
+
+/* -------------------- */
+/* Booking & Financing Section (isolated) */
+/* -------------------- */
+.booking-finance {
+  padding: 40px;
+  max-width: 1200px;
+  margin: 50px auto;
+  background: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.booking-finance h1 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 28px;
+  color: #222;
+}
+
+.booking-finance .booking-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  margin-bottom: 60px;
+}
+
+.booking-finance .booking-column {
+  flex: 1;
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+.booking-finance .booking-column h2 {
+  margin-bottom: 20px;
+  font-size: 20px;
+  color: #333;
+}
+
+.booking-finance .booking-column form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.booking-finance .booking-column select,
+.booking-finance .booking-column input,
+.booking-finance .booking-column button {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+.booking-finance .booking-column button {
+  background: #39ff14;
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.booking-finance .booking-column button:hover {
+  background: #2ecc71;
+  color: white;
+}
+
+/* Financing Section */
+.booking-finance .financing-section {
+  text-align: center;
+  padding: 30px;
+}
+
+.booking-finance .financing-section h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.booking-finance .bank-logos {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.booking-finance .bank-logos a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 150px;       /* fixed width for consistency */
+  height: 80px;       /* fixed height for consistency */
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.booking-finance .bank-logos a:hover {
+  transform: scale(1.05);
+}
+
+.booking-finance .bank-logos img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;   /* makes sure logos don’t stretch */
+}
+
